@@ -14,13 +14,15 @@ public class LoginServlet extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-		//get request parameter
-		String userName = request.getParameter("user_name");
-		
-		//set request attribute
-		request.setAttribute("user_name", userName);
-		
-		request.getRequestDispatcher("/WEB-INF/views/login.jsp").forward(request, response);
+		PrintWriter out = response.getWriter();
+		out.println("<html>");
+		out.println("<head>");
+		out.println("<title>Welcome</title>");
+		out.println("</head>");
+		out.println("<body>");
+		out.println("Please signin below");
+		out.println("</body>");
+		out.println("</html>");
 
 	}
 

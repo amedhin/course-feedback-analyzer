@@ -7,8 +7,11 @@
 <title>Welcome</title>
 </head>
 <body>
-Login Page
+<%	//scriplet
+	java.util.Date date = new java.util.Date();
+%>
+<div>Current data is <%=date %></div>
 </br>
-${user_name}
+
 </body>
 </html>
